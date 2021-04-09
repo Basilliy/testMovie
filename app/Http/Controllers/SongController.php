@@ -20,21 +20,21 @@ class SongController extends BaseController
 
     public function all(SongAllRequest $request): JsonResponse
     {
-        return $this->success([SongFacade::allSongs($request)]);
+        return $this->success(SongFacade::allSongs($request));
     }
 
     public function info(SongInfoRequest $request): JsonResponse
     {
-        return $this->success([SongFacade::itemInfo($request)]);
+        return $this->success(SongFacade::itemInfo($request));
     }
 
     public function delete(SongDeleteRequest $request): JsonResponse
     {
-        return $this->success([SongFacade::deleteItem($request)]);
+        return $this->success(['status' =>  SongFacade::deleteItem($request)]);
     }
 
     public function update(SongUpdateRequest $request): JsonResponse
     {
-        return $this->success([SongFacade::updateItem($request)]);
+        return $this->success(['status' =>  SongFacade::updateItem($request)]);
     }
 }

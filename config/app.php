@@ -185,6 +185,7 @@ return [
          * Song Service Providers
          */
         \App\Repositories\Song\SongRepositoryServiceProvider::class,
+        \App\Services\Song\SongServiceServiceProvider::class,
 
 
     ],
