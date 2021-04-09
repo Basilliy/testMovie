@@ -27,7 +27,7 @@ class MovieController extends BaseController
      */
     public function all(MovieAllRequest $request): JsonResponse
     {
-        return $this->success([MovieFacade::allMovies($request)]);
+        return $this->success(MovieFacade::allMovies($request));
     }
 
     /**
@@ -36,7 +36,7 @@ class MovieController extends BaseController
      */
     public function info(MovieInfoRequest $request): JsonResponse
     {
-        return $this->success([MovieFacade::itemInfo($request)]);
+        return $this->success(MovieFacade::itemInfo($request));
     }
 
     /**
@@ -45,7 +45,7 @@ class MovieController extends BaseController
      */
     public function delete(MovieDeleteRequest $request): JsonResponse
     {
-        return $this->success([MovieFacade::deleteItem($request)]);
+        return $this->success(['status' =>  MovieFacade::deleteItem($request)]);
     }
 
     /**
@@ -54,6 +54,6 @@ class MovieController extends BaseController
      */
     public function update(MovieUpdateRequest $request): JsonResponse
     {
-        return $this->success([MovieFacade::updateItem($request)]);
+        return $this->success(['status' =>  MovieFacade::updateItem($request)]);
     }
 }

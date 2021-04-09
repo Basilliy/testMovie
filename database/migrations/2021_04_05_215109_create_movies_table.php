@@ -18,7 +18,7 @@ class CreateMoviesTable extends Migration
             $table->string('title', 150);
             $table->string('description', 300);
             $table->integer('year');
-            $table->string('name_of_director', 4);
+            $table->string('name_of_director');
             $table->dateTime('release_date');
             $table->timestamps();
         });
